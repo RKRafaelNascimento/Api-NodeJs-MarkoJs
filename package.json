@@ -1,0 +1,26 @@
+{
+  "name": "NodeJsAlura",
+  "version": "1.0.0",
+  "description": " Project descripition",
+  "main": "server.js",
+  "author": "Rafael Nascimento <rkrafael.nascimento@gmail.com>",
+  "homepage": "https://github.com/RKRafaelNascimento/NodeJsAlura#readme",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RKRafaelNascimento/NodeJsAlura.git"
+  },
+  "keywords": [
+    "node",
+    "nodeExpress"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RKRafaelNascimento/NodeJsAlura/issues"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
