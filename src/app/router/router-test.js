@@ -1,3 +1,5 @@
+const db = require("../../config/database")
+const bookDao = require("../dao/list-dao")
 module.exports = (app) => {
 
     app.get('/', (req, res) => {
@@ -13,21 +15,13 @@ module.exports = (app) => {
     })
 
     app.get('/list', (req, res) => {
-        res.marko(require("../views/list.marko"), {
-            books: [
-                {
-                    id:1,
-                    title: "NodeJs"
-                },
-                {
-                    id:2,
-                    title: "React"
-                }
-            ]
-        })
-       
+      const book = new bookDao(db)
+        book.list().then((result) => {
+            res.marko(require("../views/list.marko"), {
+                books: result
+            })
+        }).catch(error => console.error(error))
     })
-
 
 }
 
